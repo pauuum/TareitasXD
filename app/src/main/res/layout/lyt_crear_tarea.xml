@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".act_crearTarea">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Holi mundo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
