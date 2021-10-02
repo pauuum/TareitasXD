@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#86FFFFFF"
-    tools:context=".act_crearTarea">
+    tools:context=".act_creartarea">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             android:layout_marginTop="20dp"
 
             android:layout_marginRight="20dp"
-            android:background="@drawable/RectMostaza"
+            android:background="@drawable/mostaza"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -72,7 +72,7 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/TextBox"
+                android:background="@drawable/box"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:fontFamily="@font/poppins_light"

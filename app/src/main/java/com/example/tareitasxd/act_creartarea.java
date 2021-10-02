@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class act_crearTarea extends AppCompatActivity {
+public class act_creartarea extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

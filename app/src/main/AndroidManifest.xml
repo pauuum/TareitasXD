@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TareitasXD">
         <activity
-            android:name=".act_crearTarea"
+            android:name=".act_creartarea"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
