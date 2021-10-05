@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnAddTarea = findViewById(R.id.btnAddTarea);
+
 
         btnAddTarea.setOnClickListener(new View.OnClickListener() {
             @Override
