@@ -67,7 +67,7 @@
             android:orientation="vertical">
 
             <Spinner
-                android:id="@+id/spinner4"
+                android:id="@+id/sp_Categoria"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -102,6 +102,7 @@
             android:orientation="vertical">
 
             <ListView
+                android:id="@+id/listU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
