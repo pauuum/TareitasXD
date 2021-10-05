@@ -9,18 +9,18 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnAgregarTarea;
+    Button btnAddTarea;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnAgregarTarea = findViewById(R.id.btnAgregarTarea);
+        btnAddTarea = findViewById(R.id.btnAddTarea);
 
-        btnAgregarTarea.setOnClickListener(new View.OnClickListener() {
+        btnAddTarea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, act_creartarea.class);
+                Intent i = new Intent(MainActivity.this, act_CrearTarea.class);
                 startActivity(i);
             }
         });
