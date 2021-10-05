@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddTarea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, act_CrearTarea.class);
+                Intent i = new Intent(MainActivity.this, act_prueba.class);
                 startActivity(i);
             }
         });
