@@ -24,7 +24,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Crea tu"
+                android:text="Modifica tu"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -37,7 +37,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_bold"
                 android:text="tarea"
-                android:textColor="#EDBF8E"
+                android:textColor="#F9A898"
                 android:textSize="18sp" />
 
 
@@ -49,7 +49,7 @@
 
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/cajota"
+            android:background="@drawable/cajotapink"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -155,11 +155,11 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
+                android:layout_marginLeft="80dp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#B7CBC0"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Crear tarea"
+                android:text="Modificar tarea"
                 android:textAllCaps="false"
                 app:cornerRadius="20dp" />
         </LinearLayout>
