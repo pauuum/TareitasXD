@@ -54,6 +54,14 @@
             android:padding="10dp">
 
             <TextView
+                android:id="@+id/id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="id"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/txtNombreTarea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -162,17 +170,36 @@
                 android:background="@drawable/buscador"
                 android:paddingTop="20dp" />
 
-            <Button
-                android:id="@+id/btnCrearTarea"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="#B7CBC0"
-                android:fontFamily="@font/poppins_bold"
-                android:text="Crear tarea"
-                android:textAllCaps="false"
-                app:cornerRadius="20dp" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCrearTarea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#B7CBC0"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Crear"
+                    android:textAllCaps="false"
+                    app:cornerRadius="20dp" />
+
+                <Button
+                    android:id="@+id/btnModificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#B7CBC0"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Modificar"
+                    android:textAllCaps="false"
+                    app:cornerRadius="20dp" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

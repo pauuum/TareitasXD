@@ -3,6 +3,7 @@ package com.example.tareitasxd;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOutOfMemoryException;
 import android.os.Bundle;
@@ -13,7 +14,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class act_prueba extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -23,9 +27,15 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
     private final String TABLA_TAREA = "tarea"; //Se define el nombre de la tabla.
 
     EditText txtNombre, txtDescripcionTarea, txtFecha, txtHora;
-    Button btnCrearTarea;
+    TextView identificador;
+    Button btnCrearTarea, btnModificar;
     String categoria = "";
-    String N1, D2, F3, H4;
+    String N1, D2, F3, H4, id;
+    //int idAutoincremental = 0;
+    int idOperacion;
+
+    ArrayList<Task> list;
+    ArrayAdapter<Task> adapter;
 
 
     public static final String tbTarea = "CREATE TABLE IF NOT EXISTS tarea(id INTEGER PRIMARY KEY AUTOINCREMENT, "+"" +
@@ -41,8 +51,10 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
         txtDescripcionTarea = findViewById(R.id.txtDescripcionTarea);
         txtFecha = findViewById(R.id.txtFecha);
         txtHora = findViewById(R.id.txtHora);
-        btnCrearTarea = findViewById(R.id.btnCrearTarea);
+        identificador = findViewById(R.id.id);
 
+        btnModificar = findViewById(R.id.btnModificar);
+        btnCrearTarea = findViewById(R.id.btnCrearTarea);
 
         Spinner spinner = findViewById(R.id.spCrear);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.categorias, android.R.layout.simple_spinner_item);
@@ -63,7 +75,6 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
                     /*factor1 = Float.parseFloat(f1);
                     factor2 = Float.parseFloat(f2);*/
 
-
                     if(addOperacion(N1, D2, F3, H4, categoria )){
                         Toast.makeText(getApplicationContext(), "Agregado correctamente", Toast.LENGTH_SHORT).show();
                         limpiar();
@@ -75,7 +86,34 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
             }
         });
 
+        btnModificar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                N1 = txtNombre.getText().toString();
+                D2 = txtDescripcionTarea.getText().toString();
+                F3 = txtFecha.getText().toString();
+                H4 = txtHora.getText().toString();
+                id = identificador.getText().toString();
 
+
+
+                if(!TextUtils.isEmpty(N1) && !TextUtils.isEmpty(D2) && !TextUtils.isEmpty(F3) && !TextUtils.isEmpty(H4) && !TextUtils.isEmpty(categoria)){
+                    /*factor1 = Float.parseFloat(f1);
+                    factor2 = Float.parseFloat(f2);*/
+                    idOperacion = Integer.parseInt(id);
+
+
+
+                    if(updateOperacion(idOperacion, N1, D2, F3, H4, categoria)){
+                        Toast.makeText(getApplicationContext(), "Agregado correctamente", Toast.LENGTH_SHORT).show();
+                        limpiar();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Error al agregar en la base de datos", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            }
+        });
 
     }//Fin onCreate
 
@@ -109,8 +147,44 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
         content.put("txtFecha", txtFecha );
         content.put("txtHora", txtHora);
         content.put("categoria", categoria);
+
+        //idAutoincremental = idAutoincremental+1;
+
         return db.insert(TABLA_TAREA, null, content) > 0; /*gregar a la bd*/
     }//Fin addOperacion
+
+    private boolean updateOperacion(int id, String txtNombre, String txtDescripcionTarea, String txtFecha, String txtHora, String categoria){
+        ContentValues content  = new ContentValues();
+        content.put("txtNombre", txtNombre);
+        content.put("txtDescripcionTarea", txtDescripcionTarea);
+        content.put("txtFecha", txtFecha );
+        content.put("txtHora", txtHora);
+        content.put("categoria", categoria);
+        return db.update(TABLA_TAREA, content, "id="+id, null)>0;
+    }// FIn removeOperacion
+
+    private ArrayList<Task> getTask(){
+        Cursor cursor = db.query(TABLA_TAREA, new String[]{"id", "txtNombre", "txtDescripcionTarea", "txtFecha", "txtHora", "categoria"},
+                null, null, null, null, "id desc");
+
+        cursor.moveToFirst();// Se mueve el cursor al primer registro
+        ArrayList<Task> lista0 = new ArrayList<>();
+
+        while (!cursor.isAfterLast()){
+            Task task = new Task();
+            task.setId(cursor.getInt(0));
+            task.setTituloTarea(cursor.getString(1));
+            task.setDescripcion(cursor.getString(2));
+            task.setFecha(cursor.getString(3));
+            task.setHora(cursor.getString(4));
+            task.setCategoria(cursor.getString(5));
+
+            lista0.add(task);
+            cursor.moveToNext();
+        }//FIn while
+        cursor.close();
+        return lista0;
+    }// Fin getOperacion
 
     public void limpiar(){
         txtNombre.setText("");
