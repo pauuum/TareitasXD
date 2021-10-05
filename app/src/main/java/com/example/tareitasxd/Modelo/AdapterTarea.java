@@ -36,7 +36,7 @@ public class AdapterTarea extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        if(view == null){
+        /*if(view == null){
             LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.item_tarea);
         }
@@ -47,7 +47,7 @@ public class AdapterTarea extends BaseAdapter {
 
         lbNombre.setText(list.get(i).getUser());
         lbCarnet.setText(list.get(i).getName());
-        lbCarrera.setText(list.get(i).getLastName());
+        lbCarrera.setText(list.get(i).getLastName());*/
 
 
         return view;
