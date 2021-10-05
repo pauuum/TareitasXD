@@ -54,7 +54,7 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/txtNombreTareaM"
+                android:id="@+id/txtNombreTarea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -87,7 +87,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName13"
+                android:id="@+id/txtDescripcionTarea"
                 android:layout_width="279dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
@@ -109,7 +109,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName14"
+                android:id="@+id/txtFecha"
                 android:layout_width="277dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
@@ -131,7 +131,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName15"
+                android:id="@+id/txtHora"
                 android:layout_width="273dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
@@ -172,7 +172,9 @@
                 android:fontFamily="@font/poppins_bold"
                 android:text="Modificar tarea"
                 android:textAllCaps="false"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp"  />
+
+
         </LinearLayout>
 
     </LinearLayout>

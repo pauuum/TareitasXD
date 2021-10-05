@@ -14,9 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    private static SQLiteDatabase db; //Se define la base de datos.
-    private static final String NOMBRE_BD = "MultiSQLite"; //Se define el nombre de la bd.
-    private final String TABLA_TAREA = "tarea"; //Se define el nombre de la tabla.
+
     
     Button btnAddTarea;
 
