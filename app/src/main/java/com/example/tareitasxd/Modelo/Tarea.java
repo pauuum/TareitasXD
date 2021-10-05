@@ -1,17 +1,15 @@
 package com.example.tareitasxd.Modelo;
 
-
-import android.os.Parcel;
-import android.os.Parcelable;
-
-public class Tarea implements Parcelable {
+public class Tarea   {
+    private int id = 0;
     private String tituloTarea;
     private String categoria;
     private String fecha;
-    private  String hora;
+    private String hora;
     private String descripcion;
 
-    public Tarea(String tituloTarea, String categoria, String fecha, String hora, String descripcion) {
+    public Tarea(int id, String tituloTarea, String categoria, String fecha, String hora, String descripcion) {
+        this.id = id;
         this.tituloTarea = tituloTarea;
         this.categoria = categoria;
         this.fecha = fecha;
@@ -20,6 +18,7 @@ public class Tarea implements Parcelable {
     }
 
     public Tarea() {
+        this.id = 0;
         this.tituloTarea = "";
         this.categoria = "";
         this.fecha = "";
@@ -27,25 +26,13 @@ public class Tarea implements Parcelable {
         this.descripcion = "";
     }
 
-    protected Tarea (Parcel in) {
-        tituloTarea = in.readString();
-        categoria = in.readString();
-        fecha = in.readString();
-        hora = in.readString();
-        descripcion = in.readString();
+    public int getId() {
+        return id;
     }
 
-    public static final Creator<Tarea> CREATOR = new Creator<Tarea>() {
-        @Override
-        public Tarea createFromParcel(Parcel in) {
-            return new Tarea(in);
-        }
-
-        @Override
-        public Tarea[] newArray(int size) {
-            return new Tarea[size];
-        }
-    };
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getTituloTarea() {
         return tituloTarea;
@@ -90,25 +77,12 @@ public class Tarea implements Parcelable {
     @Override
     public String toString() {
         return "Tarea{" +
-                "tituloTarea='" + tituloTarea + '\'' +
+                "id=" + id +
+                ", tituloTarea='" + tituloTarea + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", fecha='" + fecha + '\'' +
                 ", hora='" + hora + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 '}';
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(tituloTarea);
-        parcel.writeString(categoria);
-        parcel.writeString(fecha);
-        parcel.writeString(hora);
-        parcel.writeString(descripcion);
     }
 }

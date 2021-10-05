@@ -61,7 +61,8 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="Nombre de la tarea:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName"
@@ -81,7 +82,8 @@
                 android:layout_marginTop="35dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="Descripción de la tarea:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName13"
@@ -101,7 +103,8 @@
                 android:layout_marginTop="35dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="Fecha límite:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName14"
@@ -121,7 +124,8 @@
                 android:layout_marginTop="35dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="Hora límite:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName15"
@@ -141,7 +145,8 @@
                 android:layout_marginTop="35dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="Seleccionar categoría:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
             <Spinner
                 android:id="@+id/spinner2"
