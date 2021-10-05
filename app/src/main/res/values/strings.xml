@@ -1,12 +1,3 @@
 <resources>
     <string name="app_name">TareitasXD</string>
-
-    <string-array name="categoria">
-        <item>Trabajo</item>
-        <item>Estudio</item>
-        <item>Recreación</item>
-        <item>Compras</item>
-    </string-array>
-
-
 </resources>

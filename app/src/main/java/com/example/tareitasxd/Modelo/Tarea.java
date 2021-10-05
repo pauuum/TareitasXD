@@ -1,15 +1,15 @@
 package com.example.tareitasxd.Modelo;
 
+
+
 public class Tarea   {
-    private int id = 0;
     private String tituloTarea;
     private String categoria;
     private String fecha;
-    private String hora;
+    private  String hora;
     private String descripcion;
 
-    public Tarea(int id, String tituloTarea, String categoria, String fecha, String hora, String descripcion) {
-        this.id = id;
+    public Tarea(String tituloTarea, String categoria, String fecha, String hora, String descripcion) {
         this.tituloTarea = tituloTarea;
         this.categoria = categoria;
         this.fecha = fecha;
@@ -18,20 +18,11 @@ public class Tarea   {
     }
 
     public Tarea() {
-        this.id = 0;
         this.tituloTarea = "";
         this.categoria = "";
         this.fecha = "";
         this.hora = "";
         this.descripcion = "";
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTituloTarea() {
@@ -77,8 +68,7 @@ public class Tarea   {
     @Override
     public String toString() {
         return "Tarea{" +
-                "id=" + id +
-                ", tituloTarea='" + tituloTarea + '\'' +
+                "tituloTarea='" + tituloTarea + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", fecha='" + fecha + '\'' +
                 ", hora='" + hora + '\'' +
