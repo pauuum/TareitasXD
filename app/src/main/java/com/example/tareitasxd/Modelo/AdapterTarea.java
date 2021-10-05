@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class AdapterTarea extends BaseAdapter {
+ /*public class AdapterTarea extends BaseAdapter {
 
-    Context context;
+   Context context;
     ArrayList<Tarea> list;
 
     public AdapterTarea (Context context, ArrayList<Tarea> list) {
@@ -47,10 +47,10 @@ public class AdapterTarea extends BaseAdapter {
 
         lbNombre.setText(list.get(i).getUser());
         lbCarnet.setText(list.get(i).getName());
-        lbCarrera.setText(list.get(i).getLastName());*/
+        lbCarrera.setText(list.get(i).getLastName());
 
 
         return view;
     }
-}
+}*/
 
