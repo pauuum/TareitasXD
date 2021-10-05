@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#86FFFFFF"
-    tools:context=".act_crearTarea">
+    tools:context=".act_CrearTarea">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,13 +45,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="614dp"
             android:layout_marginLeft="20dp"
 
             android:layout_marginTop="20dp"
 
             android:layout_marginRight="20dp"
-            android:background="@drawable/RectMostaza"
+            android:background="@drawable/cajota"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -71,7 +71,7 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/TextBox"
+                android:background="@drawable/cajita"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:fontFamily="@font/poppins_light"
@@ -95,7 +95,7 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/TextBox"
+                android:background="@drawable/cajita"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:fontFamily="@font/poppins_light"
@@ -119,7 +119,7 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/TextBox"
+                android:background="@drawable/cajita"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:fontFamily="@font/poppins_light"
@@ -143,7 +143,7 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/TextBox"
+                android:background="@drawable/cajita"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:fontFamily="@font/poppins_light"
@@ -162,13 +162,38 @@
                 android:textColor="#FFFFFF" />
 
 
-            <EditText
-                android:id="@+id/editTextTextPersonName7"
+            <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="294dp"
-                android:layout_height="32dp"
+                android:layout_height="35dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="2dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/cajita"
+                tools:layout_marginBottom="100dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="#B7CBC0"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Crear tarea"
+                android:textAllCaps="false" />
+
+            <
+
+            <<<
+
+            << HEAD
+                android:layout_marginTop="2dp"
                 android:background="@drawable/TextBox"
+        </LinearLayout><![CDATA[=======
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cajita"
+>>>>>>> 53690d596f7389103084c2deeb158b8ae1d1104b
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:fontFamily="@font/poppins_light"
@@ -176,15 +201,6 @@
                 android:textColor="#FFFFFF"
                 tools:layout_marginRight="20dp" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="100dp"
-                android:layout_marginRight="100dp"
-                android:text="Button" />
-
-        </LinearLayout>
+            ]]>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
