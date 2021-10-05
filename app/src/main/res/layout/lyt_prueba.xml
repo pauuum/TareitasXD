@@ -154,7 +154,7 @@
                 android:textSize="16sp" />
 
             <Spinner
-                android:id="@+id/spinner2"
+                android:id="@+id/spCrear"
                 android:layout_width="300dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
