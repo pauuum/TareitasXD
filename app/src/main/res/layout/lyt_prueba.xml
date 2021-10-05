@@ -65,7 +65,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/txtNombreTarea"
                 android:layout_width="279dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
@@ -87,7 +87,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName13"
+                android:id="@+id/txtDescripcion"
                 android:layout_width="279dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
@@ -109,7 +109,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName14"
+                android:id="@+id/txtFechaLimite"
                 android:layout_width="277dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
@@ -131,7 +131,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName15"
+                android:id="@+id/txtHoraLimite"
                 android:layout_width="273dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
@@ -154,7 +154,7 @@
                 android:textSize="16sp" />
 
             <Spinner
-                android:id="@+id/spinner2"
+                android:id="@+id/spCrearTarea"
                 android:layout_width="300dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
@@ -163,7 +163,7 @@
                 android:paddingTop="20dp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnCrearTarea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
