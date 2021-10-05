@@ -1,8 +1,10 @@
 package com.example.tareitasxd.Modelo;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Tarea   {
+public class Tarea implements Parcelable {
     private String tituloTarea;
     private String categoria;
     private String fecha;
@@ -24,6 +26,26 @@ public class Tarea   {
         this.hora = "";
         this.descripcion = "";
     }
+
+    protected Tarea (Parcel in) {
+        tituloTarea = in.readString();
+        categoria = in.readString();
+        fecha = in.readString();
+        hora = in.readString();
+        descripcion = in.readString();
+    }
+
+    public static final Creator<Tarea> CREATOR = new Creator<Tarea>() {
+        @Override
+        public Tarea createFromParcel(Parcel in) {
+            return new Tarea(in);
+        }
+
+        @Override
+        public Tarea[] newArray(int size) {
+            return new Tarea[size];
+        }
+    };
 
     public String getTituloTarea() {
         return tituloTarea;
@@ -74,5 +96,19 @@ public class Tarea   {
                 ", hora='" + hora + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(tituloTarea);
+        parcel.writeString(categoria);
+        parcel.writeString(fecha);
+        parcel.writeString(hora);
+        parcel.writeString(descripcion);
     }
 }

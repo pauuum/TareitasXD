@@ -36,19 +36,19 @@ public class AdapterTarea extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        /*if(view == null){
-            LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.item_tarea);
+        if(view == null){
+            /*LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+            view = layoutInflater.inflate(R.layout.item_tarea);*/
         }
-        TextView lbNombre = view.findViewById(R.id.lbUser);
-        TextView lbCarnet = view.findViewById(R.id.lbName);
-        TextView lbCarrera = view.findViewById(R.id.lbLastName);
+
+       /* TextView txt_NombreTarea = view.findViewById(R.id.txt_NombreTarea);
+        TextView txt_Categoria = view.findViewById(R.id.lbName);
+        TextView txt_Fecha = view.findViewById(R.id.lbLastName);
 
 
-        lbNombre.setText(list.get(i).getUser());
-        lbCarnet.setText(list.get(i).getName());
-        lbCarrera.setText(list.get(i).getLastName());*/
-
+        txt_NombreTarea.setText(list.get(i).getTituloTarea());
+        txt_Categoria.setText(list.get(i).getCategoria());
+        txt_Fecha.setText(list.get(i).getFecha());*/
 
         return view;
     }
