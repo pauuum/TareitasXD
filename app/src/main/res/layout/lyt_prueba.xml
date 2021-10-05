@@ -65,12 +65,12 @@
 
             <EditText
                 android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
+                android:layout_width="279dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
                 android:backgroundTint="#F9EADB"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name"
                 android:textColor="#F9EADB" />
 
             <TextView
@@ -84,17 +84,14 @@
                 android:textColor="#FFFFFF" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/cajitados"
+                android:id="@+id/editTextTextPersonName13"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:backgroundTint="#F9EADB"
                 android:ems="10"
-                android:fontFamily="@font/poppins_light"
                 android:inputType="textPersonName"
-                android:textColor="#FFFFFF"
-                tools:layout_marginRight="20dp" />
+                android:textColor="#F9EADB" />
 
             <TextView
                 android:id="@+id/textView28"
@@ -107,17 +104,14 @@
                 android:textColor="#FFFFFF" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/cajitados"
+                android:id="@+id/editTextTextPersonName14"
+                android:layout_width="277dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:backgroundTint="#F9EADB"
                 android:ems="10"
-                android:fontFamily="@font/poppins_light"
                 android:inputType="textPersonName"
-                android:textColor="#FFFFFF"
-                tools:layout_marginRight="20dp" />
+                android:textColor="#F9EADB" />
 
             <TextView
                 android:id="@+id/textView22"
@@ -130,17 +124,14 @@
                 android:textColor="#FFFFFF" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/cajitados"
+                android:id="@+id/editTextTextPersonName15"
+                android:layout_width="273dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:backgroundTint="#F9EADB"
                 android:ems="10"
-                android:fontFamily="@font/poppins_light"
                 android:inputType="textPersonName"
-                android:textColor="#FFFFFF"
-                tools:layout_marginRight="20dp" />
+                android:textColor="#F9EADB" />
 
             <TextView
                 android:id="@+id/textView20"
@@ -158,7 +149,7 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/cajitados" />
+                android:background="@drawable/buscador" />
 
             <Button
                 android:id="@+id/button"
