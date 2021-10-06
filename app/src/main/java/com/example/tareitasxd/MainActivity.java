@@ -6,17 +6,21 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    
+    ListView listaPrincipal;
     Button btnAddTarea;
+    ArrayAdapter adapter;
+    Adapter adapterItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setOnItemSelectedListener(this);
 
         btnAddTarea = findViewById(R.id.btnAddTarea);
+        listaPrincipal = findViewById(R.id.listaPrincipal);
 
 
         btnAddTarea.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +44,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(i);
             }
         });
+
+        listaPrincipal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                adapterItem = new Adapter(getApplicationContext(), registro.devolverLista());
+                listaPrincipal.setAdapter(adapterItem);
+            }
+        });
+
     }
 
     @Override

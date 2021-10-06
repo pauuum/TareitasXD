@@ -3,6 +3,7 @@ package com.example.tareitasxd;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOutOfMemoryException;
@@ -93,10 +94,13 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
         btnActualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                list = getTask();
+                Intent i = new Intent(act_prueba.this, MainActivity.class);
+                i.putExtra
+
+                //list = getTask();
                 adapterP = new ArrayAdapter<>(act_prueba.this, android.R.layout.simple_list_item_1, list);
                 listView.setAdapter(adapterP);
-                Toast.makeText(getApplicationContext(), "HOLA", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "HOLA", Toast.LENGTH_SHORT).show();
 
             }
         });
