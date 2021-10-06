@@ -8,8 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import com.example.tareitasxd.R;
 
- /*public class AdapterTarea extends BaseAdapter {
+ public class AdapterTarea extends BaseAdapter {
 
    Context context;
     ArrayList<Tarea> list;
@@ -36,21 +37,25 @@ import java.util.ArrayList;
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        /*if(view == null){
+        if(view == null){
             LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.item_tarea);
+            view = layoutInflater.inflate(R.layout.item_tarea, null);
         }
-        TextView lbNombre = view.findViewById(R.id.lbUser);
-        TextView lbCarnet = view.findViewById(R.id.lbName);
-        TextView lbCarrera = view.findViewById(R.id.lbLastName);
+        TextView txt_NombreTarea = view.findViewById(R.id.txt_NombreTarea);
+        TextView txt_Categoria = view.findViewById(R.id.txt_Categoria);
+        TextView txt_Fecha = view.findViewById(R.id.txt_Fecha);
+        TextView txt_Hora = view.findViewById(R.id.txt_Hora);
+        TextView txt_Descripcion = view.findViewById(R.id.txt_Fecha);
 
 
-        lbNombre.setText(list.get(i).getUser());
-        lbCarnet.setText(list.get(i).getName());
-        lbCarrera.setText(list.get(i).getLastName());
+        txt_NombreTarea.setText(list.get(i).getTituloTarea());
+        txt_Categoria.setText(list.get(i).getCategoria());
+        txt_Fecha.setText(list.get(i).getFecha());
+        txt_Hora.setText(list.get(i).getHora());
+        txt_Descripcion.setText(list.get(i).getDescripcion());
 
 
         return view;
     }
-}*/
+}
 

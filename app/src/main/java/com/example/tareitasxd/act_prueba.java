@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,14 +29,14 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
 
     EditText txtNombre, txtDescripcionTarea, txtFecha, txtHora;
     TextView identificador;
-    Button btnCrearTarea, btnModificar;
+    Button btnCrearTarea, btnModificar, btnActualizar;
     String categoria = "";
     String N1, D2, F3, H4, id;
-    //int idAutoincremental = 0;
+    ListView listView;
     int idOperacion;
 
     ArrayList<Task> list;
-    ArrayAdapter<Task> adapter;
+    ArrayAdapter<Task> adapterP;
 
 
     public static final String tbTarea = "CREATE TABLE IF NOT EXISTS tarea(id INTEGER PRIMARY KEY AUTOINCREMENT, "+"" +
@@ -53,8 +54,11 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
         txtHora = findViewById(R.id.txtHora);
         identificador = findViewById(R.id.id);
 
+        listView = findViewById(R.id.lista);
+
         btnModificar = findViewById(R.id.btnModificar);
         btnCrearTarea = findViewById(R.id.btnCrearTarea);
+        btnActualizar = findViewById(R.id.btnCrearTarea);
 
         Spinner spinner = findViewById(R.id.spCrear);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.categorias, android.R.layout.simple_spinner_item);
@@ -86,6 +90,27 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
             }
         });
 
+        btnActualizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                list = getTask();
+                adapterP = new ArrayAdapter<>(act_prueba.this, android.R.layout.simple_list_item_1, list);
+                listView.setAdapter(adapterP);
+                Toast.makeText(getApplicationContext(), "HOLA", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Task task = list.get(i);
+                /*txtFactor1.setText(String.valueOf(operacion.getFactor1()));
+                txtFactor2.setText(String.valueOf(operacion.getFactor2()));
+                identificador.setText(String.valueOf(operacion.getId()));*/
+            }
+        });
+
         btnModificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,8 +124,8 @@ public class act_prueba extends AppCompatActivity implements AdapterView.OnItemS
 
                 if(!TextUtils.isEmpty(N1) && !TextUtils.isEmpty(D2) && !TextUtils.isEmpty(F3) && !TextUtils.isEmpty(H4) && !TextUtils.isEmpty(categoria)){
                     /*factor1 = Float.parseFloat(f1);
-                    factor2 = Float.parseFloat(f2);*/
-                    idOperacion = Integer.parseInt(id);
+                    factor2 = Float.parseFloat(f2);
+                    idOperacion = Integer.parseInt(id);*/
 
 
 

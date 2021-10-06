@@ -45,7 +45,7 @@
 
         <LinearLayout
             android:layout_width="364dp"
-            android:layout_height="492dp"
+            android:layout_height="584dp"
 
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -59,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:text="id"
                 android:textAlignment="center"
+                android:textColor="#EDBF8E"
                 android:textSize="16sp" />
 
             <TextView
@@ -176,29 +177,50 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnCrearTarea"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginTop="20dp"
-                    android:backgroundTint="#B7CBC0"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="Crear"
-                    android:textAllCaps="false"
-                    app:cornerRadius="20dp" />
-
-                <Button
-                    android:id="@+id/btnModificar"
+                    android:id="@+id/btnActualizar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:backgroundTint="#B7CBC0"
                     android:fontFamily="@font/poppins_bold"
+                    android:text="Actualizar"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    app:cornerRadius="20dp" />
+
+                <Button
+                    android:id="@+id/btnCrearTarea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#B7CBC0"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Crear"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    app:cornerRadius="20dp" />
+
+                <Button
+                    android:id="@+id/btnModificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#B7CBC0"
+                    android:fontFamily="@font/poppins_bold"
                     android:text="Modificar"
                     android:textAllCaps="false"
+                    android:textSize="12sp"
                     app:cornerRadius="20dp" />
+
             </LinearLayout>
+
+            <ListView
+                android:id="@+id/lista"
+                android:layout_width="match_parent"
+                android:layout_height="88dp" />
 
         </LinearLayout>
 
