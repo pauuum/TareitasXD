@@ -15,12 +15,19 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
+
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     ListView listaPrincipal;
     Button btnAddTarea;
     ArrayAdapter adapter;
     Adapter adapterItem;
+
+    ArrayList<Task> listaC;
+    ArrayList<Task> listF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +61,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         });
 
     }
+
+    private ArrayList<Task> filtrarLista (String categoria, ArrayList<Task> listaC){
+        ArrayList<Task> listF = new ArrayList<>();
+        if(categoria.equalsIgnoreCase("Todos"))
+        {
+            listF = listaC;
+        }else{
+            for (int i = 0; i < listaC.size(); i++){
+                if(categoria.equalsIgnoreCase(listaC.get(i).getCategoria())){
+                    listF.add(listaC.get(i));
+                }
+            }
+        }
+        return listF;
+
+    }
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
